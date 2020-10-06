@@ -1,0 +1,106 @@
+@import "../../styles/helper/colors";
+@import "../../styles/helper/variables";
+
+header {
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid color($yellow, 200);
+
+    .wrp {
+        padding: 20px;
+        @include bp($desktop) {
+            padding: 35px 60px;
+            margin-bottom: 0;
+        }
+    }
+
+    .c-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      z-index: 2;
+      background-color: rgba(110,129,244, .9);
+      display: none;
+      &.open-menu {
+          display: block;
+          overflow-y: scroll;
+      }
+      @include bp($desktop) {
+        display: block;
+        position: relative;
+        top: inherit;
+        left: inherit;
+        width: auto;
+        height: auto;
+        padding: inherit;
+        z-index: inherit;
+        background-color: transparent;
+      }
+        .c-nav__item {
+            @include bp($desktop) {
+                &:hover {
+                    opacity: .8;
+                    &::after {
+                        opacity: 1;
+                        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                    }
+                }
+            }
+            &.c-nav__item--icon {
+                @include bp($desktop) {
+                    &:hover {
+                        &::after {
+                            display: none;
+                        }
+                        .c-nav__dropdown {
+                            display: block;
+                            z-index: 99999;
+                        }
+                    }
+                }
+                .c-nav__link {
+                    color: color($yellow, 200);
+                    @include bp($desktop) {
+                        color: color($blue, 100);
+                    }
+                    
+                    svg {
+                        fill: color($yellow, 200);
+                        @include bp($desktop) {
+                            fill: color($blue, 100);
+                        }
+                    }
+                }
+            }
+            .c-nav__link {
+                color: color($white, 100);
+                @include bp($desktop) {
+                    color: color($gray, 200);
+                }
+            }
+            .c-nav__dropdown {
+                padding: 10px;
+                width: 220px;
+                z-index: 1;
+                @include bp($desktop) {
+                    position: absolute;
+                    top: 26px;
+                    border: 1px solid color($gray, 300);
+                    border-radius: 8px;
+                    background-color: color($white, 100);
+                    display: none;
+                }
+                .c-nav__dropdown-item {
+                    color: color($yellow, 200);
+                    @include bp($desktop) {
+                        color: color($blue, 100);
+                    }
+                }
+            }
+        }
+    }
+}

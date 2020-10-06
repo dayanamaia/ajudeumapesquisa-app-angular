@@ -1,0 +1,72 @@
+@import "../../styles/helper/colors";
+@import "../../styles/helper/variables";
+
+footer {
+    background-color: color($blue, 100);
+    padding: 40px 0;
+
+    .c-nav {
+        display: none;
+        @include bp($desktop) {
+            display: block;
+        }
+        .c-nav__item {
+            .c-nav__link {
+                color: color($gray, 300);
+                &:hover {
+                    opacity: .8;
+                }
+            }
+            &.c-nav__item--icon {
+                .c-nav__link {
+                    color: color($yellow, 200);
+                    svg {
+                        fill: color($yellow, 200);
+                    }
+                }
+            }
+            .c-nav__dropdown {
+                .c-nav__dropdown-item {
+                    color: color($yellow, 200);
+                }
+            }
+        }
+    }
+
+    .obs {
+        clear: both;
+        padding-bottom: 10px;
+        border-bottom: 1px solid color($gray, 300);
+        margin-top: 20px;
+        @include bp($desktop) {
+            margin-top: 100px;
+        }
+        .obs__legal {
+            color: color($gray, 300);
+            @include em(14);
+            display: inline-block;
+            a {
+                text-decoration: none;
+                color: color($yellow, 200);
+            }
+        }
+        .c-social-links {
+            text-align: right;
+            @include bp($desktop) {
+                float: right;
+            }
+        }
+    }
+}
+
+.c-social-links {
+    .c-social-links__link {
+        margin-left: 10px;
+        font-size: 0;
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: color($yellow, 200);
+        }
+    }
+}
