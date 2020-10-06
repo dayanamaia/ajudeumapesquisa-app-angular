@@ -1,4 +1,4 @@
-import { IPesquisas } from './../../services/interfaces/pesquisa.interface';
+import { IPesquisas } from '../../services/interfaces/pesquisa.interfaces';
 import { PesquisaService } from './../../services/pesquisa.service';
 import { Component, OnInit } from '@angular/core';
 
