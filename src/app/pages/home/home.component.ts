@@ -1,3 +1,5 @@
+import { IPesquisas } from './../../services/interfaces/pesquisa.interface';
+import { PesquisaService } from './../../services/pesquisa.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  pesquisas: IPesquisas;
 
-  constructor() { }
+  constructor(
+    private pesquisaService: PesquisaService
+  ) { }
+
+  setPesquisas() {
+    this.pesquisaService.getPesquisas().subscribe(data => this.pesquisas = data);
+  }
 
   ngOnInit(): void {
+    this.setPesquisas();
   }
 
 }
