@@ -34,8 +34,8 @@
             margin-top: 0;
 
             &:nth-child(even) {
-                margin-right: 10px;
-                margin-left: 10px;
+                margin-right: .4rem;
+                margin-left: .4rem;
             }
         }
         @include bp($desktop) {
