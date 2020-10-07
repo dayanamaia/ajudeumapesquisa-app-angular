@@ -52,17 +52,12 @@
   </div>
   <div class="list-card">
     <div class="container">
-      <div class="c-card">
+
+      <div class="c-card" *ngFor="let pesquisa of pesquisas">
         <div class="c-card__content">
           <a href="">
-            <h3 class="c-card__title">
-              Accelerating IoT deployment for under $50
-            </h3>
-            <p class="c-card__detail">
-              Cheap & ease onborading, fully customizable plans, and
-              developer-friendly APs enable companies to get up and runnin
-              quickly. Even with limited budgets.
-            </p>
+            <h3 class="c-card__title">{{pesquisa.nome}}</h3>
+            <p class="c-card__detail">{{pesquisa.descricao}}</p>
           </a>
           <a href="">
             <p class="c-card__location">São Paulo</p>
@@ -76,126 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="c-card">
-        <div class="c-card__content">
-          <a href="">
-            <h3 class="c-card__title">
-              Accelerating IoT deployment for under $50
-            </h3>
-            <p class="c-card__detail">
-              Cheap & ease onborading, fully customizable plans, and
-              developer-friendly APs enable companies to get up and runnin
-              quickly. Even with limited budgets.
-            </p>
-          </a>
-          <a href="">
-            <p class="c-card__location">São Paulo</p>
-          </a>
-        </div>
-        <div class="c-card__footer">
-          <div class="c-card__labels">
-            <span class="c-label c-label--remedio">remédio</span>
-            <span class="c-label c-label--reabilitacao">reabilitação</span>
-            <span class="c-label c-label--questionario">questionário</span>
-          </div>
-        </div>
-      </div>
-      <div class="c-card">
-        <div class="c-card__content">
-          <a href="">
-            <h3 class="c-card__title">
-              Accelerating IoT deployment for under $50
-            </h3>
-            <p class="c-card__detail">
-              Cheap & ease onborading, fully customizable plans, and
-              developer-friendly APs enable companies to get up and runnin
-              quickly. Even with limited budgets.
-            </p>
-          </a>
-          <a href="">
-            <p class="c-card__location">São Paulo</p>
-          </a>
-        </div>
-        <div class="c-card__footer">
-          <div class="c-card__labels">
-            <span class="c-label c-label--remedio">remédio</span>
-            <span class="c-label c-label--reabilitacao">reabilitação</span>
-            <span class="c-label c-label--questionario">questionário</span>
-          </div>
-        </div>
-      </div>
-      <div class="c-card">
-        <div class="c-card__content">
-          <a href="">
-            <h3 class="c-card__title">
-              Accelerating IoT deployment for under $50
-            </h3>
-            <p class="c-card__detail">
-              Cheap & ease onborading, fully customizable plans, and
-              developer-friendly APs enable companies to get up and runnin
-              quickly. Even with limited budgets.
-            </p>
-          </a>
-          <a href="">
-            <p class="c-card__location">São Paulo</p>
-          </a>
-        </div>
-        <div class="c-card__footer">
-          <div class="c-card__labels">
-            <span class="c-label c-label--remedio">remédio</span>
-            <span class="c-label c-label--reabilitacao">reabilitação</span>
-            <span class="c-label c-label--questionario">questionário</span>
-          </div>
-        </div>
-      </div>
-      <div class="c-card">
-        <div class="c-card__content">
-          <a href="">
-            <h3 class="c-card__title">
-              Accelerating IoT deployment for under $50
-            </h3>
-            <p class="c-card__detail">
-              Cheap & ease onborading, fully customizable plans, and
-              developer-friendly APs enable companies to get up and runnin
-              quickly. Even with limited budgets.
-            </p>
-          </a>
-          <a href="">
-            <p class="c-card__location">São Paulo</p>
-          </a>
-        </div>
-        <div class="c-card__footer">
-          <div class="c-card__labels">
-            <span class="c-label c-label--remedio">remédio</span>
-            <span class="c-label c-label--reabilitacao">reabilitação</span>
-            <span class="c-label c-label--questionario">questionário</span>
-          </div>
-        </div>
-      </div>
-      <div class="c-card">
-        <div class="c-card__content">
-          <a href="">
-            <h3 class="c-card__title">
-              Accelerating IoT deployment for under $50
-            </h3>
-            <p class="c-card__detail">
-              Cheap & ease onborading, fully customizable plans, and
-              developer-friendly APs enable companies to get up and runnin
-              quickly. Even with limited budgets.
-            </p>
-          </a>
-          <a href="">
-            <p class="c-card__location">São Paulo</p>
-          </a>
-        </div>
-        <div class="c-card__footer">
-          <div class="c-card__labels">
-            <span class="c-label c-label--remedio">remédio</span>
-            <span class="c-label c-label--reabilitacao">reabilitação</span>
-            <span class="c-label c-label--questionario">questionário</span>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
