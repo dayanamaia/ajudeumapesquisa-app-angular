@@ -1,6 +1,7 @@
-import { IPesquisas } from '../../services/interfaces/pesquisa.interfaces';
 import { PesquisaService } from './../../services/pesquisa.service';
 import { Component, OnInit } from '@angular/core';
+
+import { IPesquisa } from '../../services/interfaces/pesquisa.interfaces';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  pesquisas: IPesquisas;
+  pesquisas: IPesquisa[] = [];
 
   constructor(
     private pesquisaService: PesquisaService

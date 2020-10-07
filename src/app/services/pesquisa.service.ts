@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IPesquisas } from './interfaces/pesquisa.interfaces';
+import { IPesquisa } from './interfaces/pesquisa.interfaces';
 
 import { environment } from './../../environments/environment';
 
@@ -9,7 +9,8 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class PesquisaService {
-  private pesquisas: IPesquisas;
+  private pesquisas: IPesquisa[];
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -20,8 +21,8 @@ export class PesquisaService {
     private http: HttpClient,
   ) { }
 
-  getPesquisas(): Observable<IPesquisas> {
-    return this.http.get<IPesquisas>(`${environment.urlService}/pesquisas`,this.httpOptions);
+  getPesquisas(): Observable<IPesquisa[]> {
+    return this.http.get<IPesquisa[]>(`${environment.urlService}/pesquisas`,this.httpOptions);
   }
   
 }
