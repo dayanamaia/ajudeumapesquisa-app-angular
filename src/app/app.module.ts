@@ -26,7 +26,7 @@ import { LoadingComponent } from './components/loading/loading.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [ PesquisaService ],
   bootstrap: [AppComponent]

@@ -1,12 +1,14 @@
 <section class="split">
     <div class="split__container" *ngIf="pesquisa">
         <div class="split__box">
-            <h2 class="split__title">{{pesquisa.nome}}</h2>
-            <p class="split__description">{{pesquisa.descricao}}</p>
-            <div class="c-card__labels">
-                <span class="c-label c-label--remedio">remédio</span>
-                <span class="c-label c-label--reabilitacao">reabilitação</span>
-                <span class="c-label c-label--questionario">questionário</span>
+            <div class="split__box-container">
+                <h2 class="split__title">{{pesquisa.nome}}</h2>
+                <p class="split__description">{{pesquisa.descricao}}</p>
+                <div class="c-card__labels">
+                    <span class="c-label c-label--remedio">remédio</span>
+                    <span class="c-label c-label--reabilitacao">reabilitação</span>
+                    <span class="c-label c-label--questionario">questionário</span>
+                </div>
             </div>
         </div>
         <div class="split__box">

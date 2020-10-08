@@ -20,14 +20,14 @@ export class PesquisaComponent implements OnInit {
 
   checkDataPesqusia() {
     if(this.pesquisaService.pesquisa) {
-      this.pesquisa = this.pesquisaService.pesquisa.find(data => data.id = this.id)
+      this.pesquisa = this.pesquisaService.pesquisa[this.id -1];
     } else {
       this.pesquisaService.reqOnlyPesquisa(this.id).subscribe(data => this.pesquisa = data)
     }
   }
 
   getParam(){
-    this.route.params.subscribe(param => this.id = param['id'])
+    this.route.params.subscribe(param => this.id = parseInt(param['id'], 10))
   }
   
   ngOnInit(): void {
