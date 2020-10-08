@@ -1,6 +1,7 @@
 <section class="split">
     <div class="split__container" *ngIf="pesquisa">
         <div class="split__box">
+            <btn class="split__btn-back" (click)="goBack()"></btn>
             <div class="split__box-container">
                 <h2 class="split__title">{{pesquisa.nome}}</h2>
                 <p class="split__description">{{pesquisa.descricao}}</p>

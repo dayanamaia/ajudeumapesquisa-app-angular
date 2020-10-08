@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { IPesquisa } from 'src/app/services/interfaces/pesquisa.interfaces';
 import { PesquisaService } from 'src/app/services/pesquisa.service';
 
@@ -15,7 +16,8 @@ export class PesquisaComponent implements OnInit {
 
   constructor(
     private pesquisaService: PesquisaService,
-    private route: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private location: Location
   ) { }
 
   checkDataPesqusia() {
@@ -27,9 +29,13 @@ export class PesquisaComponent implements OnInit {
   }
 
   getParam(){
-    this.route.params.subscribe(param => this.id = parseInt(param['id'], 10))
+    this.activatedRoute.params.subscribe(param => this.id = parseInt(param['id'], 10))
   }
   
+goBack() {
+  this.location.back();
+}
+
   ngOnInit(): void {
     this.getParam();
     this.checkDataPesqusia();

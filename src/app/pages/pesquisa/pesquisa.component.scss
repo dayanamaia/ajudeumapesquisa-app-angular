@@ -33,6 +33,14 @@
         margin-left: 40%;
     }
 
+    &__btn-back {
+        background: url('../../../assets/images/layout/icon-arrow-left.png') no-repeat 0 0;
+        background-size: 100%;
+        width: 40px;
+        height: 28px;
+        cursor: pointer;
+    }
+
     &__title {
         font-size: 2rem;
         margin-top: 6rem;
