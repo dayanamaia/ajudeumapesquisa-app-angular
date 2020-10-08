@@ -11,6 +11,7 @@ import { PesquisaComponent } from './pages/pesquisa/pesquisa.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { PesquisaService } from './services/pesquisa.service';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PesquisaService } from './services/pesquisa.service';
     BannerComponent,
     HomeComponent,
     PesquisaComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

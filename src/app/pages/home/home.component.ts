@@ -16,7 +16,14 @@ export class HomeComponent implements OnInit {
   ) { }
 
   setPesquisas() {
-    this.pesquisaService.getPesquisas().subscribe(data => this.pesquisas = data);
+    this.pesquisaService.reqPesquisas().subscribe(data => { 
+      this.pesquisas = data;
+      this.pesquisaService.pesquisa = data;
+    });
+  }
+
+  hasPesquisas() {
+    return this.pesquisas.length > 0;
   }
 
   ngOnInit(): void {

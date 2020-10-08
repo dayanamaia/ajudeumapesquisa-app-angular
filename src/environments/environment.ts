@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlService: 'http://demo-env.eba-2mz3pch5.us-east-2.elasticbeanstalk.com/api'
+  urlService: 'https://lit-reaches-09709.herokuapp.com/api'
 };
 
 /*

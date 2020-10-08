@@ -1,1 +1,41 @@
-<p>pesquisa works!</p>
+<section class="split">
+    <div class="split__container" *ngIf="pesquisa">
+        <div class="split__box">
+            <h2 class="split__title">{{pesquisa.nome}}</h2>
+            <p class="split__description">{{pesquisa.descricao}}</p>
+            <div class="c-card__labels">
+                <span class="c-label c-label--remedio">remédio</span>
+                <span class="c-label c-label--reabilitacao">reabilitação</span>
+                <span class="c-label c-label--questionario">questionário</span>
+            </div>
+        </div>
+        <div class="split__box">
+            <div class="split__col">
+                <h3 class="split__sub-title">Critérios de aceite</h3>
+                <p>{{pesquisa.criteriosAceite}}</p>
+            </div>
+            <div class="split__col">
+                <h3 class="split__sub-title">Critérios de exclusão</h3>
+                <p>{{pesquisa.criteriosExclusao}}</p>
+            </div>
+            <div class="split__col">
+                <h3 class="split__sub-title">Etapas</h3>
+                <p>{{pesquisa.etapasPesquisa}}</p>
+            </div>
+            <div class="split__container-numbers">
+                <div class="split__box-numb">
+                    <span class="numb">{{pesquisa.idadeMinina}}</span>
+                    <span class="text">idade mínima</span>
+                </div>
+                <div class="split__box-numb">
+                    <span class="numb">{{pesquisa.idadeMaxima}}</span>
+                    <span class="text">idade máxima</span>
+                </div>
+                <div class="split__box-numb">
+                    <span class="numb">{{pesquisa.totalAmostra}}</span>
+                    <span class="text">total de amostra</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

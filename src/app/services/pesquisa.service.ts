@@ -21,8 +21,20 @@ export class PesquisaService {
     private http: HttpClient,
   ) { }
 
-  getPesquisas(): Observable<IPesquisa[]> {
-    return this.http.get<IPesquisa[]>(`${environment.urlService}/pesquisas`,this.httpOptions);
+  reqPesquisas(): Observable<IPesquisa[]> {
+    return this.http.get<IPesquisa[]>(`${environment.urlService}/pesquisas`, this.httpOptions);
+  }
+
+  reqOnlyPesquisa(id: number): Observable<IPesquisa> {
+    return this.http.get<IPesquisa>(`${environment.urlService}/pesquisas/${id}`, this.httpOptions);
+  }
+
+  set pesquisa(arr: IPesquisa[]) {
+    this.pesquisas = arr;
+  }
+
+  get pesquisa(): IPesquisa[] {
+    return this.pesquisas;
   }
   
 }

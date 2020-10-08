@@ -51,8 +51,8 @@
     </div>
   </div>
   <div class="list-card">
-    <div class="container">
-
+    <app-loading *ngIf="!hasPesquisas()"></app-loading>
+    <div class="container" *ngIf="hasPesquisas()">
       <div class="c-card" *ngFor="let pesquisa of pesquisas">
         <div class="c-card__content">
           <a routerLink= "/pesquisa-clinica/{{pesquisa.id}}">

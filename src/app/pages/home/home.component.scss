@@ -60,7 +60,7 @@
         }
         .c-card__detail,
         .c-card__location {
-            @include em(14);
+            @include em(14.24);
         }
         .c-card__location {
             margin: 4px 0;

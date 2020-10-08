@@ -38,11 +38,11 @@
             letter-spacing: 2px;
             color: color($blue, 100);
             margin-bottom: 10px;
+
             @include bp($desktop) {
-                @include em(35);
-                line-height: 35px;
+                @include em(50);
+                line-height: 52px;
                 margin-bottom: 20px;
-                width: 338px;
             }
         }
         
